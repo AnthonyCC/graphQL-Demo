@@ -1,0 +1,23 @@
+<h1>
+  {{title}} + {{counter}}
+</h1>
+<div>
+  <button (click)="refresh()">Soft Refresh</button>
+
+  <button (click)="refetch()">Hard Refresh</button>
+</div>
+<div>
+  <input type="text" [(ngModel)]="newPassword">
+  <button (click)="updatePassword(newPassword)">Change User Password</button>
+</div>
+<div>
+  <input type="text" [(ngModel)]="newUserName">
+  <input type="text" [(ngModel)]="newUserPassword">
+  <button (click)="addUser(newUserName, newUserPassword)">Create New User</button>
+</div>
+<div>
+  {{response}}
+</div>
+<span ng-if="userData">{{userData && userData[0] && userData[0].password}}</span>
+
+<app-grid [rowData]="userData"></app-grid>
