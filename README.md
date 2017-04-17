@@ -1,3 +1,6 @@
+To install:
+npm install && cd securitization-web-app && npm install
+
 To start the server:
 nodemon index
 
